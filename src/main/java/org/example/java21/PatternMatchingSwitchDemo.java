@@ -39,7 +39,7 @@ public class PatternMatchingSwitchDemo {
 
     // ---- Java 21: switch with type patterns + record patterns ------------
     // No default needed: the compiler knows Shape is sealed and all 3 cases are covered.
-    static double area(Shape shape) {
+    public static double area(Shape shape) {
         return switch (shape) {
             case Circle(double r) -> Math.PI * r * r;
             case Square(double side) -> side * side;
@@ -48,7 +48,7 @@ public class PatternMatchingSwitchDemo {
     }
 
     // ---- Java 21: guards ("when") and null handling ----------------------
-    static String classify(Object obj) {
+    public static String classify(Object obj) {
         return switch (obj) {
             case null -> "It's null (before Java 21 this threw NullPointerException)";
             case Integer i when i < 0 -> "Negative integer: " + i;
