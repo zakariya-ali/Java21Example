@@ -12,6 +12,7 @@
         <maven.compiler.release>21</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>5.10.2</junit.version>
+        <mode>all</mode>
     </properties>
 
     <dependencies>
@@ -56,6 +57,7 @@
                         <argument>-classpath</argument>
                         <classpath/>
                         <argument>org.example.Main</argument>
+                        <argument>${mode}</argument>
                     </arguments>
                 </configuration>
             </plugin>
