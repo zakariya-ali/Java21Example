@@ -27,6 +27,6 @@ public class LibraryAdditionsDemo {
 
         // Character.isEmoji (and friends)
         int smiley = "😀".codePointAt(0);
-        System.out.println("Character.isEmoji(😀)    = " + Character.isEmoji(smiley));
+        System.out.println("Character.isEmoji(U+1F600) = " + Character.isEmoji(smiley));
     }
 }
