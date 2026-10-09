@@ -32,19 +32,12 @@
                 <version>3.13.0</version>
                 <configuration>
                     <release>21</release>
-                    <!-- Needed for the preview feature demo (String Templates / unnamed classes) -->
-                    <compilerArgs>
-                        <arg>--enable-preview</arg>
-                    </compilerArgs>
                 </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
-                <configuration>
-                    <argLine>--enable-preview</argLine>
-                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -53,7 +46,6 @@
                 <configuration>
                     <executable>java</executable>
                     <arguments>
-                        <argument>--enable-preview</argument>
                         <argument>-classpath</argument>
                         <classpath/>
                         <argument>org.example.Main</argument>
